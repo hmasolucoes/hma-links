@@ -40,6 +40,10 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 .in{border-radius:19px;background:linear-gradient(180deg,rgba(15,25,46,.92),rgba(8,13,26,.94));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:18px;display:flex;align-items:center;gap:14px;overflow:hidden;position:relative}
 .ic{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#0a58d6,#0072FF);box-shadow:0 6px 18px rgba(0,114,255,.45)}
 .ic svg{width:24px;height:24px;fill:#fff}
+.ic.off,.main .ic.off{background:#fff!important;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.ic.off svg{width:28px;height:28px}
+.socials a.off{background:#fff;border-color:#fff}
+.socials a.off:hover{box-shadow:0 8px 24px rgba(0,114,255,.45)}
 .t{flex:1;min-width:0}
 .t b{display:block;font:700 16.5px var(--fd);letter-spacing:-.01em}
 .t span{display:block;color:var(--mut);font-size:13px;line-height:1.4;margin-top:2px}
@@ -73,40 +77,31 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 </head>
 <body>
 <div class="bg grid"></div><div class="bg circuit"></div><div class="bg noise"></div><div class="bg vig"></div><div class="bg scan"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="igg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".25" stop-color="#FA7E1E"/><stop offset=".5" stop-color="#D62976"/><stop offset=".75" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs></svg>
 <main class="wrap">
   <header class="hero">
     <img class="logo" src="logo.png" alt="HMA Soluções Digitais" width="290" height="123">
     <p class="bio">Conectamos o físico ao digital através de soluções inteligentes! 🎯🌐 Serviços de Marketing e Audiovisual!</p>
     <span class="pill"><i class="dot"></i>Atendendo Barreiras - BA e região</span>
     <div class="socials">
-      <a href="https://www.instagram.com/digital.hma" target="_blank" rel="noopener" aria-label="Instagram da HMA"><svg viewBox="0 0 24 24"><path d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a>
-      <a href="https://wa.me/+5577999735965" target="_blank" rel="noopener" aria-label="WhatsApp da HMA"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+      <a href="https://www.instagram.com/digital.hma" target="_blank" rel="noopener" aria-label="Instagram da HMA" class="off"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igg)" d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a>
+      <a href="https://wa.me/+5577999735965" target="_blank" rel="noopener" aria-label="WhatsApp da HMA" class="off"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
     </div>
   </header>
 
   <h2 class="h2">Produtos</h2>
 
-  <a class="card feat" href="https://hma.bolt.host" target="_blank" rel="noopener">
+  <a class="card" href="https://hma.bolt.host" target="_blank" rel="noopener">
     <div class="in">
-      <div class="top">
-        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11ZM12 4.1c.9 1 1.9 3.2 2.1 6.9H9.9C10.1 7.300 11.100 5.100 12 4.100ZM4.100 13h3c.1 2 .6 3.900 1.300 5.500A8 8 0 0 1 4.100 13Zm3-2h-3a8 8 0 0 1 4.300-5.500A15.600 15.600 0 0 0 7.100 11Zm2.800 2h4.200c-.2 3.700-1.200 5.900-2.100 6.900-.9-1-1.900-3.200-2.100-6.900Zm4.500 5.500c.7-1.600 1.200-3.500 1.300-5.500h3a8 8 0 0 1-4.300 5.500Z"/></svg></span>
-        <div class="t"><b>Conheça nosso Site!</b><span>Criação de site, Google Meu Negócio, display NFC e página de links em Barreiras - BA e região.</span></div>
-      </div>
-      <div class="svcs" aria-label="Alguns dos nossos serviços">
-        <div class="svc"><b>Google Business completo</b><i>R$ 250</i></div>
-        <div class="svc"><b>Página de links personalizada</b><i>R$ 70</i></div>
-        <div class="svc"><b>Display NFC + QR Code</b><i>R$ 70</i></div>
-        <div class="svc"><b>Catálogo WhatsApp</b><i>a partir de R$ 100</i></div>
-        <div class="svc"><b>Site completo</b><i>sob orçamento</i></div>
-        <div class="svc"><b>Audiovisual profissional</b><i>sob orçamento</i></div>
-      </div>
-      <div class="more"><span>Ver todos os serviços no site</span><span>→</span></div>
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11ZM12 4.1c.9 1 1.9 3.2 2.1 6.9H9.9C10.1 7.300 11.100 5.100 12 4.100ZM4.100 13h3c.1 2 .6 3.900 1.300 5.500A8 8 0 0 1 4.100 13Zm3-2h-3a8 8 0 0 1 4.300-5.500A15.600 15.600 0 0 0 7.100 11Zm2.800 2h4.200c-.2 3.700-1.200 5.900-2.100 6.900-.9-1-1.900-3.200-2.100-6.900Zm4.500 5.500c.7-1.600 1.200-3.500 1.300-5.500h3a8 8 0 0 1-4.300 5.500Z"/></svg></span>
+      <div class="t"><b>Conheça nosso site!</b><span>Serviços, preços e contato</span></div>
+      <span class="go">→</span>
     </div>
   </a>
 
   <a class="card main" href="https://g.page/r/Ca0OeUstqborEAI/review" target="_blank" rel="noopener">
     <div class="in">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></span>
+      <span class="ic off"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></span>
       <div class="t"><b>Avalie no Google!</b><span><em class="stars" style="font-style:normal">★★★★★</em> &nbsp;Sua opinião importa</span></div>
       <span class="go">→</span>
     </div>
@@ -114,7 +109,7 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 
   <a class="card" href="https://wa.me/+5577999735965?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20links%20da%20HMA%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
     <div class="in">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+      <span class="ic off"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
       <div class="t"><b>WhatsApp</b><span>(77) 99973-5965 · Fale com a gente</span></div>
       <span class="go">→</span>
     </div>
@@ -122,7 +117,7 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 
   <a class="card" href="https://www.instagram.com/digital.hma" target="_blank" rel="noopener">
     <div class="in">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></span>
+      <span class="ic off"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="url(#igg)" d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></span>
       <div class="t"><b>Instagram</b><span>@digital.hma</span></div>
       <span class="go">→</span>
     </div>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HMA Soluções Digitais</title>
+<meta name="description" content="Conectamos o físico ao digital através de soluções inteligentes! Serviços de Marketing e Audiovisual.">
+<meta name="theme-color" content="#05070D">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap">
+<style>
+:root{--bg:#05070D;--blue:#0072FF;--blue2:#3D9BFF;--ice:#CFE3FF;--text:#EAF1FF;--mut:#8D9BB5;--glass:rgba(14,22,40,.62);--line:rgba(80,140,255,.22);--fd:"Sora",system-ui,sans-serif;--fb:"Inter",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);position:relative;overflow-x:hidden;background:
+ radial-gradient(900px 520px at 50% -8%,rgba(0,114,255,.34),transparent 62%),
+ radial-gradient(600px 460px at 100% 38%,rgba(0,90,220,.16),transparent 70%),
+ radial-gradient(600px 460px at 0% 72%,rgba(0,114,255,.14),transparent 70%),var(--bg)}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.grid{background-image:linear-gradient(rgba(70,130,255,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(70,130,255,.075) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:radial-gradient(ellipse 75% 70% at 50% 28%,#000 25%,transparent 78%);mask-image:radial-gradient(ellipse 75% 70% at 50% 28%,#000 25%,transparent 78%)}
+.vig{background:radial-gradient(ellipse at 50% 40%,transparent 55%,rgba(0,0,0,.55) 100%)}
+.scan{background:linear-gradient(180deg,transparent,rgba(0,114,255,.10),transparent);height:240px;animation:scan 9s linear infinite;inset:auto 0 auto 0;top:-240px}
+@keyframes scan{to{transform:translateY(calc(100vh + 480px))}}
+.wrap{position:relative;z-index:1;max-width:440px;margin:0 auto;padding:44px max(16px,env(safe-area-inset-right)) 48px max(16px,env(safe-area-inset-left));display:flex;flex-direction:column;align-items:center;gap:18px}
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin-bottom:6px}
+.logo{width:min(290px,78%);height:auto;filter:drop-shadow(0 0 26px rgba(0,114,255,.55))}
+.bio{margin:0;max-width:34ch;color:var(--ice);font-size:15.5px;text-wrap:balance}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:rgba(0,114,255,.10);font-size:12.5px;color:var(--ice);letter-spacing:.02em}
+.dot{width:8px;height:8px;border-radius:50%;background:#37E39A;box-shadow:0 0 0 0 rgba(55,227,154,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(55,227,154,0)}100%{box-shadow:0 0 0 0 rgba(55,227,154,0)}}
+.socials{display:flex;gap:12px;margin-top:2px}
+.socials a{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:var(--glass);border:1px solid var(--line);color:var(--ice);transition:.25s}
+.socials a:hover{transform:translateY(-3px);border-color:var(--blue2);box-shadow:0 8px 24px rgba(0,114,255,.35);color:#fff}
+.socials svg{width:22px;height:22px;fill:currentColor}
+.h2{align-self:flex-start;margin:10px 4px 0;font:700 12px var(--fd);letter-spacing:.2em;text-transform:uppercase;color:var(--blue2)}
+.card{position:relative;width:100%;border-radius:20px;padding:1px;background:linear-gradient(140deg,rgba(61,155,255,.75),rgba(0,114,255,.12) 38%,rgba(61,155,255,.08) 62%,rgba(61,155,255,.6));text-decoration:none;color:inherit;display:block;transition:transform .25s,box-shadow .25s;animation:in .7s both}
+.card:nth-of-type(2){animation-delay:.08s}.card:nth-of-type(3){animation-delay:.16s}.card:nth-of-type(4){animation-delay:.24s}.card:nth-of-type(5){animation-delay:.32s}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,114,255,.28)}
+.in{border-radius:19px;background:linear-gradient(180deg,rgba(15,25,46,.92),rgba(8,13,26,.94));-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);padding:18px;display:flex;align-items:center;gap:14px;overflow:hidden;position:relative}
+.ic{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#0a58d6,#0072FF);box-shadow:0 6px 18px rgba(0,114,255,.45)}
+.ic svg{width:24px;height:24px;fill:#fff}
+.t{flex:1;min-width:0}
+.t b{display:block;font:700 16.5px var(--fd);letter-spacing:-.01em}
+.t span{display:block;color:var(--mut);font-size:13px;line-height:1.4;margin-top:2px}
+.go{flex:none;color:var(--blue2);font:700 20px var(--fd)}
+.feat .in{flex-direction:column;align-items:stretch;gap:16px}
+.feat .top{display:flex;align-items:center;gap:14px}
+.feat .in::after,.main .in::after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(120,180,255,.13),transparent);transform:skewX(-18deg);animation:sheen 5.5s ease-in-out infinite}
+@keyframes sheen{0%,55%{left:-60%}100%{left:130%}}
+.svcs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.svc{padding:11px 12px;border-radius:12px;border:1px solid rgba(80,140,255,.2);background:rgba(0,114,255,.07)}
+.svc b{display:block;font:600 12.6px/1.25 var(--fb);color:#fff}
+.svc i{display:block;margin-top:3px;font:normal 600 11.5px var(--fb);color:var(--blue2)}
+.more{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:12px;background:linear-gradient(135deg,#0a58d6,#0072FF);font:700 14px var(--fd);color:#fff;box-shadow:0 8px 22px rgba(0,114,255,.4)}
+.main .in{background:linear-gradient(135deg,#0a58d6,#0072FF 70%,#2e90ff)}
+.main .t span{color:#d8e8ff}.main .go{color:#fff}
+.main .ic{background:rgba(255,255,255,.16);box-shadow:none}
+.stars{color:#FBBC04;letter-spacing:2px;font-size:14px}
+.pix .in{flex-direction:column;align-items:stretch;gap:12px}
+.pix .row{display:flex;align-items:center;gap:14px}
+.key{font:600 13.5px/1.35 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ice);word-break:break-all;padding:12px 14px;border-radius:12px;background:rgba(0,114,255,.08);border:1px dashed rgba(80,140,255,.4);user-select:all}
+.btn{font:700 14.5px var(--fd);border:0;cursor:pointer;color:#fff;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,#0a58d6,#0072FF);box-shadow:0 8px 22px rgba(0,114,255,.4);transition:.2s}
+.btn:hover{filter:brightness(1.1)}
+.btn:focus-visible,.card:focus-visible,.socials a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.st{margin:0;min-height:1.3em;font-size:12.5px;color:var(--mut)}
+.foot{margin-top:14px;text-align:center;color:var(--mut);font-size:12.5px;line-height:1.7}
+.foot b{display:block;color:var(--ice);font:700 14px var(--fd);margin-bottom:4px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.circuit{opacity:.5;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360' fill='none' stroke='%230072FF' stroke-opacity='.35' stroke-width='1.4'%3E%3Cpath d='M0 60h70l22 22h60M120 0v40l30 30h90M360 150h-80l-24 24h-50l-30 30M60 360v-70l30-30h70M200 360v-50l24-24h90M0 250h40l20-20'/%3E%3Cg fill='%230a1830'%3E%3Ccircle cx='70' cy='60' r='4'/%3E%3Ccircle cx='152' cy='82' r='4'/%3E%3Ccircle cx='240' cy='70' r='4'/%3E%3Ccircle cx='280' cy='150' r='4'/%3E%3Ccircle cx='160' cy='204' r='4'/%3E%3Ccircle cx='160' cy='260' r='4'/%3E%3Ccircle cx='314' cy='286' r='4'/%3E%3Ccircle cx='40' cy='250' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:360px 360px;-webkit-mask-image:linear-gradient(#000 0,#000 40%,transparent 95%);mask-image:linear-gradient(#000 0,#000 40%,transparent 95%)}
+.noise{opacity:.07;mix-blend-mode:screen;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .75 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%2523n)'/%3E%3C/svg%3E")}
+</style>
+</head>
+<body>
+<div class="bg grid"></div><div class="bg circuit"></div><div class="bg noise"></div><div class="bg vig"></div><div class="bg scan"></div>
+<main class="wrap">
+  <header class="hero">
+    <img class="logo" src="logo.png" alt="HMA Soluções Digitais" width="290" height="123">
+    <p class="bio">Conectamos o físico ao digital através de soluções inteligentes! 🎯🌐 Serviços de Marketing e Audiovisual!</p>
+    <span class="pill"><i class="dot"></i>Atendendo Barreiras - BA e região</span>
+    <div class="socials">
+      <a href="https://www.instagram.com/digital.hma" target="_blank" rel="noopener" aria-label="Instagram da HMA"><svg viewBox="0 0 24 24"><path d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a>
+      <a href="https://wa.me/+5577999735965" target="_blank" rel="noopener" aria-label="WhatsApp da HMA"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+    </div>
+  </header>
+
+  <h2 class="h2">Produtos</h2>
+
+  <a class="card feat" href="https://hma.bolt.host" target="_blank" rel="noopener">
+    <div class="in">
+      <div class="top">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11ZM12 4.1c.9 1 1.9 3.2 2.1 6.9H9.9C10.1 7.300 11.100 5.100 12 4.100ZM4.100 13h3c.1 2 .6 3.900 1.300 5.500A8 8 0 0 1 4.100 13Zm3-2h-3a8 8 0 0 1 4.300-5.500A15.600 15.600 0 0 0 7.100 11Zm2.800 2h4.200c-.2 3.700-1.200 5.900-2.100 6.900-.9-1-1.900-3.200-2.100-6.900Zm4.500 5.500c.7-1.600 1.200-3.500 1.300-5.500h3a8 8 0 0 1-4.300 5.500Z"/></svg></span>
+        <div class="t"><b>Conheça nosso Site!</b><span>Criação de site, Google Meu Negócio, display NFC e página de links em Barreiras - BA e região.</span></div>
+      </div>
+      <div class="svcs" aria-label="Alguns dos nossos serviços">
+        <div class="svc"><b>Google Business completo</b><i>R$ 250</i></div>
+        <div class="svc"><b>Página de links personalizada</b><i>R$ 70</i></div>
+        <div class="svc"><b>Display NFC + QR Code</b><i>R$ 70</i></div>
+        <div class="svc"><b>Catálogo WhatsApp</b><i>a partir de R$ 100</i></div>
+        <div class="svc"><b>Site completo</b><i>sob orçamento</i></div>
+        <div class="svc"><b>Audiovisual profissional</b><i>sob orçamento</i></div>
+      </div>
+      <div class="more"><span>Ver todos os serviços no site</span><span>→</span></div>
+    </div>
+  </a>
+
+  <a class="card main" href="https://g.page/r/Ca0OeUstqborEAI/review" target="_blank" rel="noopener">
+    <div class="in">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg></span>
+      <div class="t"><b>Avalie no Google!</b><span><em class="stars" style="font-style:normal">★★★★★</em> &nbsp;Sua opinião importa</span></div>
+      <span class="go">→</span>
+    </div>
+  </a>
+
+  <a class="card" href="https://wa.me/+5577999735965?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20links%20da%20HMA%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
+    <div class="in">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+      <div class="t"><b>WhatsApp</b><span>(77) 99973-5965 · Fale com a gente</span></div>
+      <span class="go">→</span>
+    </div>
+  </a>
+
+  <a class="card" href="https://www.instagram.com/digital.hma" target="_blank" rel="noopener">
+    <div class="in">
+      <span class="ic"><svg viewBox="0 0 24 24"><path d="M7.5 1h9A6.5 6.5 0 0 1 23 7.5v9a6.5 6.5 0 0 1-6.5 6.5h-9A6.5 6.5 0 0 1 1 16.5v-9A6.5 6.5 0 0 1 7.5 1Zm0 2A4.5 4.5 0 0 0 3 7.5v9A4.5 4.5 0 0 0 7.5 21h9a4.5 4.5 0 0 0 4.5-4.5v-9A4.5 4.5 0 0 0 16.5 3h-9ZM12 6.9a5.1 5.1 0 1 1 0 10.2 5.1 5.1 0 0 1 0-10.2Zm0 2a3.1 3.1 0 1 0 0 6.2 3.1 3.1 0 0 0 0-6.2Zm5.3-3.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></span>
+      <div class="t"><b>Instagram</b><span>@digital.hma</span></div>
+      <span class="go">→</span>
+    </div>
+  </a>
+
+  <section class="card pix" aria-labelledby="pxt">
+    <div class="in">
+      <div class="row">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg></span>
+        <div class="t"><b id="pxt">Chave PIX</b><span>Pagamento via Pix · chave aleatória</span></div>
+      </div>
+      <div class="key" id="key">ce24cb4c-40d8-45af-bb10-d9303d5b40f6</div>
+      <button class="btn" type="button" id="copy">Copiar chave Pix</button>
+      <p class="st" id="st" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <b>Seu cliente procura. Fazemos ele te encontrar. 🎯</b>
+    © HMA Soluções Digitais · Barreiras - BA
+  </footer>
+</main>
+<script>
+(function(){
+  var b=document.getElementById('copy'),k=document.getElementById('key'),s=document.getElementById('st');
+  function sel(){var r=document.createRange();r.selectNodeContents(k);var g=window.getSelection();g.removeAllRanges();g.addRange(r)}
+  b.addEventListener('click',function(){
+    var t=k.textContent.trim();
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(t).then(function(){s.textContent='Chave copiada!'}).catch(function(){sel();s.textContent='Não foi possível copiar. A chave está selecionada, copie manualmente.'});
+    }else{sel();s.textContent='A chave está selecionada, copie manualmente.'}
+  });
+})();
+</script>
+</body>
+</html>

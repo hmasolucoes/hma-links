@@ -73,6 +73,7 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .circuit{opacity:.5;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360' fill='none' stroke='%230072FF' stroke-opacity='.35' stroke-width='1.4'%3E%3Cpath d='M0 60h70l22 22h60M120 0v40l30 30h90M360 150h-80l-24 24h-50l-30 30M60 360v-70l30-30h70M200 360v-50l24-24h90M0 250h40l20-20'/%3E%3Cg fill='%230a1830'%3E%3Ccircle cx='70' cy='60' r='4'/%3E%3Ccircle cx='152' cy='82' r='4'/%3E%3Ccircle cx='240' cy='70' r='4'/%3E%3Ccircle cx='280' cy='150' r='4'/%3E%3Ccircle cx='160' cy='204' r='4'/%3E%3Ccircle cx='160' cy='260' r='4'/%3E%3Ccircle cx='314' cy='286' r='4'/%3E%3Ccircle cx='40' cy='250' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:360px 360px;-webkit-mask-image:linear-gradient(#000 0,#000 40%,transparent 95%);mask-image:linear-gradient(#000 0,#000 40%,transparent 95%)}
 .noise{opacity:.07;mix-blend-mode:screen;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .75 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%2523n)'/%3E%3C/svg%3E")}
+.hand{position:absolute;right:44px;bottom:3px;width:34px;height:34px;pointer-events:none;z-index:3;filter:drop-shadow(0 2px 3px rgba(0,0,0,.55));animation:tap 1.7s ease-in-out infinite}@keyframes tap{0%,100%{transform:translate(0,0)}50%{transform:translate(-4px,-6px)}}
 </style>
 </head>
 <body>
@@ -105,7 +106,7 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
       <div class="t"><b>Avalie no Google!</b><span><em class="stars" style="font-style:normal">★★★★★</em> &nbsp;Sua opinião importa</span></div>
       <span class="go">→</span>
     </div>
-  </a>
+  <svg class="hand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 11V4.6a1.6 1.6 0 0 1 3.2 0v5.6l4.9 1a2.9 2.9 0 0 1 2.3 3.3l-.8 4.8A2.2 2.2 0 0 1 16.6 21H11a2.4 2.4 0 0 1-1.8-.8l-4.3-5a1.4 1.4 0 0 1 2.1-1.8L9.2 14.8Z" fill="#fff" stroke="#111" stroke-width="1.1" stroke-linejoin="round"/><path d="M12.4 10.3v3.2M15 11v2.6" stroke="#111" stroke-width=".9" stroke-linecap="round" fill="none"/></svg></a>
 
   <a class="card" href="https://wa.me/+5577999735965?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20links%20da%20HMA%20e%20quero%20saber%20mais." target="_blank" rel="noopener">
     <div class="in">

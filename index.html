@@ -73,6 +73,23 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .circuit{opacity:.5;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360' fill='none' stroke='%230072FF' stroke-opacity='.35' stroke-width='1.4'%3E%3Cpath d='M0 60h70l22 22h60M120 0v40l30 30h90M360 150h-80l-24 24h-50l-30 30M60 360v-70l30-30h70M200 360v-50l24-24h90M0 250h40l20-20'/%3E%3Cg fill='%230a1830'%3E%3Ccircle cx='70' cy='60' r='4'/%3E%3Ccircle cx='152' cy='82' r='4'/%3E%3Ccircle cx='240' cy='70' r='4'/%3E%3Ccircle cx='280' cy='150' r='4'/%3E%3Ccircle cx='160' cy='204' r='4'/%3E%3Ccircle cx='160' cy='260' r='4'/%3E%3Ccircle cx='314' cy='286' r='4'/%3E%3Ccircle cx='40' cy='250' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:360px 360px;-webkit-mask-image:linear-gradient(#000 0,#000 40%,transparent 95%);mask-image:linear-gradient(#000 0,#000 40%,transparent 95%)}
 .noise{opacity:.07;mix-blend-mode:screen;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6 0 0 0 0 .75 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%2523n)'/%3E%3C/svg%3E")}
+.sub{align-self:flex-start;margin:2px 4px -6px;color:var(--mut);font-size:13px}
+.shot{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#000;cursor:zoom-in;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.shot img{display:block;width:100%;height:auto}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.93);display:grid;place-items:center;padding:12px;cursor:zoom-out}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.ph{position:relative;flex:none;width:236px;height:480px;border:8px solid #10151f;border-radius:36px;background:#0b1220;overflow:hidden;box-shadow:0 0 0 1px var(--line),0 18px 44px rgba(0,0,0,.55)}
+.ph::before{content:"Carregando prévia…";position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font-size:12.5px}
+.ph iframe{position:absolute;top:0;left:0;width:390px;height:822px;border:0;background:#fff;transform:scale(.564);transform-origin:0 0;pointer-events:none}
+.ph a{position:absolute;inset:0;z-index:2}
+.one{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}
+.rail{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;width:100%;padding:4px 6px 14px;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{height:6px}.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.item{flex:none;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--ice);font:700 13px var(--fd)}
+.ic.fav{background:#000;box-shadow:0 6px 18px rgba(0,114,255,.45),inset 0 0 0 1px rgba(80,140,255,.35)}
+.ic.fav svg{width:30px;height:30px}
+.opn{display:flex;align-items:center;justify-content:center;width:100%;padding:13px 16px;border-radius:12px;background:linear-gradient(135deg,#0a58d6,#0072FF);font:700 14px var(--fd);color:#fff;text-decoration:none;box-shadow:0 8px 22px rgba(0,114,255,.4)}
 </style>
 </head>
 <body>
@@ -93,7 +110,7 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
 
   <a class="card" href="https://hma.bolt.host" target="_blank" rel="noopener">
     <div class="in">
-      <span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 9h-3a15.6 15.6 0 0 0-1.3-5.5A8 8 0 0 1 18.9 11ZM12 4.1c.9 1 1.9 3.2 2.1 6.9H9.9C10.1 7.300 11.100 5.100 12 4.100ZM4.100 13h3c.1 2 .6 3.900 1.300 5.500A8 8 0 0 1 4.100 13Zm3-2h-3a8 8 0 0 1 4.300-5.500A15.600 15.600 0 0 0 7.100 11Zm2.800 2h4.200c-.2 3.700-1.200 5.900-2.100 6.900-.9-1-1.900-3.200-2.100-6.900Zm4.500 5.500c.7-1.600 1.200-3.500 1.300-5.500h3a8 8 0 0 1-4.300 5.500Z"/></svg></span>
+      <span class="ic fav"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="26.5 8 321 321"><rect x="52" y="40" width="56" height="257" rx="16" fill="#fff"/><rect x="266.5" y="81" width="55.5" height="216" rx="16" fill="#fff"/><rect x="87.5" y="159.5" width="201" height="41" fill="#0071FD"/><circle cx="87.5" cy="180" r="30.5" fill="#0071FD"/><circle cx="288.5" cy="180" r="30.5" fill="#0071FD"/></svg></span>
       <div class="t"><b>Conheça nosso site!</b><span>Serviços, preços e contato</span></div>
       <span class="go">→</span>
     </div>
@@ -123,6 +140,16 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
     </div>
   </a>
 
+  <h2 class="h2">Portfólio</h2>
+  <p class="sub">Plaquinhas NFC criadas pela HMA · toque para ampliar</p>
+  <button class="shot" type="button" data-src="portfolio-1.jpg"><img src="portfolio-1.jpg" alt="Plaquinhas NFC da HMA, grade 1" loading="lazy"></button>
+  <button class="shot" type="button" data-src="portfolio-2.jpg"><img src="portfolio-2.jpg" alt="Plaquinhas NFC da HMA, grade 2" loading="lazy"></button>
+  <p class="sub">Site criado pela HMA</p>
+  <div class="one"><div class="item" style="width:100%"><div class="ph"><iframe src="https://luananeves.bolt.host" title="Prévia: Espaço Terapêutico Luana Neves" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://luananeves.bolt.host" target="_blank" rel="noopener" aria-label="Abrir Espaço Terapêutico Luana Neves"></a></div><a class="opn" href="https://luananeves.bolt.host" target="_blank" rel="noopener">Abrir site da Luana Neves</a></div></div>
+  <p class="sub">Páginas de links criadas pela HMA · deslize para ver</p>
+  <div class="rail"><div class="item"><div class="ph"><iframe src="https://hmasolucoes.github.io/elma-studio/" title="Prévia: Elma Studio" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://hmasolucoes.github.io/elma-studio/" target="_blank" rel="noopener" aria-label="Abrir Elma Studio"></a></div><span>Elma Studio</span></div><div class="item"><div class="ph"><iframe src="https://hmasolucoes.github.io/estacao-da-moda/" title="Prévia: Estação da Moda" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://hmasolucoes.github.io/estacao-da-moda/" target="_blank" rel="noopener" aria-label="Abrir Estação da Moda"></a></div><span>Estação da Moda</span></div><div class="item"><div class="ph"><iframe src="https://hmasolucoes.github.io/gelatos-gourmet/" title="Prévia: Gelatos Gourmet" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://hmasolucoes.github.io/gelatos-gourmet/" target="_blank" rel="noopener" aria-label="Abrir Gelatos Gourmet"></a></div><span>Gelatos Gourmet</span></div><div class="item"><div class="ph"><iframe src="https://hmasolucoes.github.io/academia-superacao/" title="Prévia: Academia Superação" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://hmasolucoes.github.io/academia-superacao/" target="_blank" rel="noopener" aria-label="Abrir Academia Superação"></a></div><span>Academia Superação</span></div><div class="item"><div class="ph"><iframe src="https://hmasolucoes.github.io/tapiocaria-links/" title="Prévia: Tapiocaria da Paizinha" loading="lazy" tabindex="-1" referrerpolicy="no-referrer"></iframe><a href="https://hmasolucoes.github.io/tapiocaria-links/" target="_blank" rel="noopener" aria-label="Abrir Tapiocaria da Paizinha"></a></div><span>Tapiocaria da Paizinha</span></div></div>
+  <div class="lb" id="lb" hidden><img id="lbi" alt=""></div>
+
   <section class="card pix" aria-labelledby="pxt">
     <div class="in">
       <div class="row">
@@ -150,6 +177,12 @@ body{margin:0;min-height:100vh;color:var(--text);font:400 15px/1.5 var(--fb);pos
       navigator.clipboard.writeText(t).then(function(){s.textContent='Chave copiada!'}).catch(function(){sel();s.textContent='Não foi possível copiar. A chave está selecionada, copie manualmente.'});
     }else{sel();s.textContent='A chave está selecionada, copie manualmente.'}
   });
+})();
+
+(function(){var lb=document.getElementById('lb'),im=document.getElementById('lbi');
+  document.querySelectorAll('.shot').forEach(function(b){b.addEventListener('click',function(){im.src=b.getAttribute('data-src');lb.hidden=false})});
+  lb.addEventListener('click',function(){lb.hidden=true});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.hidden=true});
 })();
 </script>
 </body>
